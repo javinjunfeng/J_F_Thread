@@ -51,7 +51,7 @@ public class BooleanLockTest {
         {
             IntStream.range(0, 10).mapToObj(i -> new Thread(blt::syncMethod)).forEach(Thread::start);
         }
-        
+
 
         {
             new Thread(blt::syncMethod, "T1").start();
