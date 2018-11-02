@@ -124,7 +124,7 @@ public class BasicThreadPool extends Thread implements ThreadPool {
         // 从线程池中移除某个线程
         ThreadTask threadTask = threadQueue.remove();
         threadTask.internalTask.stop();
-        // hreadTask.thread.interrupt();
+        threadTask.thread.interrupt();
         this.activeCount--;
     }
 
